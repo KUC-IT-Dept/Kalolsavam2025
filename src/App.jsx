@@ -1,6 +1,12 @@
 
 import './App.css'
-import Home from './components/home'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+
+import Home from './components/Home'
+import Search from './components/Search'
+import Schedule from './components/Schedule'
+
 
 function App() {
 
@@ -9,7 +15,14 @@ function App() {
   return (
     <>
 
-      <Home />
+
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Search' element={<Search />} />
+          <Route path='/Schedule' element={<Schedule />} />
+        </Routes>
+      </BrowserRouter>
 
     </>
   )
