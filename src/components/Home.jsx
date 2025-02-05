@@ -1,21 +1,68 @@
 import logo from '../assets/logo.png';
 
+const data = [
+  {
+    id: 1,
+    name: "Team A",
+    score: 10,
+    position: 0
+  },
+  {
+    id: 2,
+    name: "Team B",
+    score: 20,
+    position: 0
+  },
+  {
+    id: 3,
+    name: "Team C",
+    score: 30,
+    position: 0
+  },
+  {
+    id: 4,
+    name: "Team D",
+    score: 30,
+    position: 0
+  },
+  {
+    id: 5,
+    name: "Team E",
+    score: 30,
+    position: 0
+  },
+  {
+    id: 6,
+    name: "Team F",
+    score: 90,
+    position: 0
+  }
+];
+
 function Home() {
+  // sort the data 
+  const sortedData = data.sort((a, b) => b.score - a.score);
+
+  // Assign positions based on the sorted order
+  sortedData.forEach((team, index) => {
+    team.position = index + 1; // Position starts from 1
+  });
+
   return (
     <div className="bg-[#F6E7D8] h-screen flex flex-col items-center">
       <img src={logo} className='w-[10vh] mt-[-3vh] ' alt="Logo" />
 
       <h1 className="text-4xl font-bold text-[#874356] mt-[-3vh]">സകവാഴ്‌വ്</h1>
       <div className="w-full max-w-md ">
-        {Array.from({ length: 6 }).map((_, index) => (
-          <div key={index} className="bg-[#874356] ml-5 mr-5 mt-4 text-white p-4 mb-4 rounded-lg">
-            <h2 className="text-xl">TEAM A</h2>
-            <p>Total Score: <span className="font-semibold">0</span></p>
-            <p>Position: <span className="font-semibold">0</span></p>
+        {sortedData.map((team) => (
+          <div key={team.id} className="bg-[#874356] ml-5 mr-5 mt-4 text-white p-4 mb-4 rounded-lg">
+            <h2 className="text-xl">{team.name}</h2>
+            <p>Total Score: <span className="font-semibold">{team.score}</span></p>
+            <p>Position: <span className="font-semibold">{team.position}</span></p>
           </div>
         ))}
       </div>
-      <div className="flex justify-around w-full mt-auto mb-4 bg-[#874356] pb-2">
+      <div className="flex justify-around w-full mt-auto mb-4 bg-[#874356] pb-2 rounded-lg">
         <div className="p-2 rounded-full mt-4">
           <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M34.4125 14.7283L29.1081 9.42385V3.29636C29.1081 2.18842 28.2103 1.29053 27.1007 1.29053C25.9937 1.29053 25.0959 2.18842 25.0959 3.29636V5.4117L21.1463 1.46199C19.1936 -0.489649 15.7985 -0.486187 13.8502 1.46553L0.58721 14.7283C-0.195737 15.5128 -0.195737 16.7822 0.58721 17.5654C1.37051 18.3497 2.64236 18.3497 3.42537 17.5654L16.6871 4.30235C17.1192 3.87258 17.8806 3.87258 18.3104 4.30107L31.5744 17.5654C31.9677 17.9576 32.4805 18.1527 32.9931 18.1527C33.5068 18.1527 34.0205 17.9574 34.4126 17.5654C35.1958 16.7822 35.1958 15.5128 34.4125 14.7283Z" fill="white" stroke="white" />
