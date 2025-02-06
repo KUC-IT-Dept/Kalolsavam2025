@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+/* Additional styles for sticky navBar */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
