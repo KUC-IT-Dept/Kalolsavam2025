@@ -6,8 +6,8 @@
      
       
 - [ ] Schedule 
-  - [ ] showing schedule with sample data
-  - [ ] Static Page, nothing to worry about backend.
+  - [x] showing schedule with sample data
+  - [x] Static Page, nothing to worry about backend.
      
         
 - [ ] Backend in Firebase (CRUD)
