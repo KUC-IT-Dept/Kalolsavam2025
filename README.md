@@ -1,8 +1,15 @@
-# React + Vite
+# To Do List : 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [ ] Search Page
+  - [ ] Searching with sample data
+  - [ ] Show Data in the DIV assigned (based on 1st and second position in order)
+     
+      
+- [ ] Schedule 
+  - [ ] showing schedule with sample data
+  - [ ] Static Page, nothing to worry about backend.
+     
+        
+- [ ] Backend in Firebase (CRUD)
+  - [ ] Taking Data from admin. => Search & Home.
+- [ ] Hosting in Firebase/netlify 
